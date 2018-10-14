@@ -1,0 +1,57 @@
+Redux by examples
+======================
+Origin: https://medium.com/front-end-hacking/redux-by-example-part-1-4afca1b7bd58
+
+excerpt from Read Me — Redux:
+------------------------------
+The whole state of your app is stored in an object tree inside a single store.
+The only way to change the state tree is to emit an action, an object describing what happened.
+To specify how the actions transform the state tree, you write pure reducers.
+-----------------------------------------------------------------------------------------------
+These examples illustrate a number of core Redux concepts.
+They are provided as Node.js applications; without any browser or React complexities.
+
+mdkir redux-abc
+cd redux-abc
+yarn init
+
+yarn add babel-cli babel-preset-env eslint eslint-plugin-import eslint-config-airbnb-base -D
+
+yarn add redux redux-actions
+("immutable", "redux-immutable") ?
+
+create ./.babelrc : {    "presets": ["env"]  }
+create ./.eslintrc.js
+create ./.gitignore
+
+create ./src
+add package.json scripts: "babel": "babel src -d dist"
+
+create ./src/Hello-world.js
+yarn babel
+node dist/01hello-world.js
+
+yand add babel-plugin-transform-object-rest-spread -D
+create ./src/02array.js, ./src/03array-broken.js, ./src/04array-fixed.js
+yarn babel
+node dist/02array.js
+node dist/03array-broken.js
+node dist/04array-fixed.js
+
+create ./src/05array-delete.js, ./src/0606list.js, ./src/07list-fetch.js, ./src/08list-update.js
+node dist/05array-delete.js
+node dist/06list.js
+node dist/07list-fetch.js
+node dist/08list-update
+
+yarn add normalizr
+create ./src/09normalizr.js, ./src/10action-creators.js, ./src/11selectors.js
+node dist/09normalizr.js
+node dist/10action-creators.js
+node dist/11selectors.js
+
+
+yarn add reselect
+create ./src/12selectors-broken.js ./src/13reselect.js
+node dist/12selectors-broken.js
+node dist/13reselect.js

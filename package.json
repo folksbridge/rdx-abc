@@ -1,0 +1,23 @@
+{
+  "name": "redux-abc",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "babel": "babel src -d dist"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.7.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
+  "dependencies": {
+    "normalizr": "^3.3.0",
+    "redux": "^4.0.1",
+    "redux-actions": "^2.6.1",
+    "reselect": "^4.0.0"
+  }
+}
